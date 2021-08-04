@@ -1,0 +1,54 @@
+.myContainer {
+    background-color: white;
+    margin: 2% 25%;
+    box-shadow: 35px 35px 35px 15px rgb(236, 230, 236);
+    border: 2px solid purple;
+    border-radius: 5px;
+}
+
+.myForm {
+    padding: 2px 16%;
+    font-family: serif;
+}
+
+label input {
+    display: flex;
+}
+
+input {
+    padding: 2px 100px;
+    display: flex;
+}
+
+#form-title {
+    margin-left: 15%;
+    color: rgb(74, 25, 153);
+}
+
+#btn_register {
+    background-color: rgb(76, 27, 155);
+    color: white;
+    margin: 5% 45%;
+    padding: 3px 20px;
+}
+
+#btn_register :hover {
+    background-color: azure;
+    color: rgb(80, 24, 145);
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    color: #fff;
+    transition: all 0.3s;
+}

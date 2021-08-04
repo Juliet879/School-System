@@ -19,16 +19,14 @@ class Student(models.Model):
         ("ANITA_B","AnitaB"),
         ("LISALAB","LisaLab"),
     ]
-    class_name = models.CharField(max_length=2,choices=classes,default="AnitaB")
-    id_number = models.CharField(max_length=2)
+    class_name = models.CharField(max_length=12,choices=classes,default="AnitaB")
+    id_number = models.CharField(max_length=40)
     email = models.EmailField()
-    admission_date = models.DateField()
-    academic_year = models.IntegerField()
+    academic_year = models.IntegerField(null=True)
     class_name = models.CharField(max_length=12,choices=classes)
-    room_number = models.PositiveSmallIntegerField()
     medical_report = models.FileField()
     guardian_name = models.CharField(max_length=40)
     # guardian_contact = models.
-    profile_image = models.FileField()
+    profile_image = models.ImageField(upload_to = "Images")
     
     
