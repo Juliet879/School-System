@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f0sg(!cwk1m@bghi2f$!-v$q+*7&gna#2ze0b@2^9bhz8(3rh7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['akirachix-schoolsystem.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'student',
     'bootstrap3',
     'trainer',
+    'courses',
 
 ]
 

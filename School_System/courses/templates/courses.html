@@ -1,0 +1,82 @@
+{% include 'School_System/base.html'%}{% load static %} {% load bootstrap3 %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" type="text/css" /> {% block styles %} {% bootstrap_css %} {% endblock %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body class="courses_body">
+    <h1 id="courses-title">Courses</h1>
+    <div class="container courses">
+        <div class="card-deck">
+            <div class="card-body  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/app.svg" alt="">
+                <h5 class="card-title" id="card-title">Frontend-Mobile Development</h5>
+                <p class="card-text  text-center">Develop mobile application in Kotlin on Android Studio</p>
+                <button id="btn_course">View Course</button>
+            </div>
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/backend.svg" alt="">
+                <h5 class="card-title" id="card-title">Backend Development</h5>
+                <p class="card-text">Create database in python and integrate frontend in django</p>
+                <button id="btn_course">View Course</button>
+            </div>
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/backend.svg" alt="">
+                <h5 class="card-title" id="card-title">Navigating Your Journey</h5>
+                <p class="card-text">Create database in python and integrate frontend in django</p>
+                <button id="btn_course">View Course</button>
+            </div>
+
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/web.svg" alt="">
+                <h5 class="card-title" id="card-title">Internet Of Things</h5>
+                <p class="card-text">Develop web applications in HTML/CSS,Bootstrap,JavaScript and React on Visual Studio</p>
+                <button id="btn_course">View Course</button>
+            </div>
+        </div>
+    </div>
+    <div class="container courses courses2">
+        <div class="card-deck">
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/web.svg" alt="">
+                <h5 class="card-title" id="card-title">Frontend-Web Development</h5>
+                <p class="card-text">Develop web applications in HTML/CSS,Bootstrap,JavaScript and React on Visual Studio</p>
+                <button id="btn_course">View Course</button>
+            </div>
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/web.svg" alt="">
+                <h5 class="card-title" id="card-title">Proessional Development</h5>
+                <p class="card-text">Develop web applications in HTML/CSS,Bootstrap,JavaScript and React on Visual Studio</p>
+                <button id="btn_course">View Course</button>
+            </div>
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/backend.svg" alt="">
+                <h5 class="card-title" id="card-title">UI/UX Research</h5>
+                <p class="card-text">Create database in python and integrate frontend in django</p>
+                <button id="btn_course">View Course</button>
+            </div>
+            <div class="card-body text-center  small-12 medium-6 large-3">
+                <img id="skills-icon" src="/images/backend.svg" alt="">
+                <h5 class="card-title" id="card-title">UI/UX Design</h5>
+                <p class="card-text">Create database in python and integrate frontend in django</p>
+                <button id="btn_course">View Course</button>
+            </div>
+        </div>
+    </div>
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %} {% endblock %}
+</body>
+
+</html>
