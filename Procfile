@@ -1,0 +1,1 @@
+web: dunicorn School_System.wsgi --log-file -
