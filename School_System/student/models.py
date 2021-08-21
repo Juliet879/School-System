@@ -8,10 +8,10 @@ class Student(models.Model):
     age = models.PositiveSmallIntegerField()
     date_of_birth =  models.DateField()
     nations = [
-            ("KENYAN","Kenyan"),
-            ("RWANDAN","Rwandan"),
-            ("UGANDAN","Ugandan"),
-            ("SOUTH SUDANEESE","South Sudaneese"),
+            ("Kenyan","Kenyan"),
+            ("Rwandan","Rwandan"),
+            ("Ugandan","Ugandan"),
+            ("South Sudaneese","South Sudaneese"),
     ]
     nationality = models.CharField(max_length=15,choices=nations,default="Kenyan")
     classes = [
@@ -19,14 +19,13 @@ class Student(models.Model):
         ("ANITA_B","AnitaB"),
         ("LISALAB","LisaLab"),
     ]
-    class_name = models.CharField(max_length=12,choices=classes,default="AnitaB",null=True,blank=True)
+    class_name = models.CharField(max_length=15,choices=classes,default="AnitaB",null=True,blank=True)
     id_number = models.CharField(max_length=40)
     email = models.EmailField()
     academic_year = models.IntegerField(null=True,blank=True)
-    class_name = models.CharField(max_length=12,choices=classes,null=True,blank=True)
-    medical_report = models.FileField()
+    medical_report = models.FileField(upload_to="documents/")
     guardian_name = models.CharField(max_length=40)
     # guardian_contact = models.
-    profile_image = models.ImageField(upload_to ="Images")
+    profile_image = models.ImageField(upload_to ="images/",null=True,blank=True)
     
     

@@ -1,15 +1,19 @@
 /* Forms styling */
 
+* {
+    font-family: serif;
+    font-size: 15px;
+}
+
 .myContainer {
     background-color: white;
-    margin: 2% 25%;
-    box-shadow: 35px 35px 35px 15px rgb(236, 230, 236);
-    border: 2px solid purple;
-    border-radius: 5px;
+    box-shadow: 15px rgb(236, 230, 236);
+    margin-left: 30%;
+    margin-right: 20%;
 }
 
 .myForm {
-    padding: 2px 16%;
+    padding: 0px 16%;
     font-family: serif;
 }
 
@@ -22,16 +26,31 @@ input {
     display: flex;
 }
 
-#btn_register {
-    background-color: rgb(76, 27, 155);
+#btn-register {
+    background-color: rgba(98, 4, 110, 0.925);
     color: white;
-    margin: 5% 45%;
-    padding: 3px 20px;
+    margin: 5% 40%;
+    padding: 6px 20px;
 }
 
-#btn_register :hover {
+#btn-register2 {
+    background-color: rgba(98, 4, 110, 0.925);
+    color: white;
+    margin-top: 5%;
+    padding: 6px 15px;
+    margin-left: 390%;
+    font-size: 12px;
+}
+
+#btn-register :hover {
     background-color: azure;
     color: rgb(80, 24, 145);
+}
+
+#form-title {
+    margin-left: 40%;
+    color: blueviolet;
+    font-family: serif;
 }
 
 
@@ -52,13 +71,16 @@ input {
 nav a {
     color: rgb(248, 244, 244);
     text-decoration: none;
-    font-size: 25px;
+    font-size: 10px;
     padding-top: 2%;
 }
 
-.navigation {
+.navigation .navbar-brand {
     margin-left: 10%;
-    margin-top: 20%;
+}
+
+#logo {
+    margin-right: -300px;
 }
 
 
@@ -97,6 +119,7 @@ nav a {
 
 #card-title {
     margin: 0px 30px;
+    color: blueviolet;
 }
 
 .card-deck {
@@ -134,4 +157,35 @@ nav a {
     background-color: rgb(168, 186, 202);
     border-radius: 5px;
     margin: 3% 20%;
+}
+
+.stulist {
+    background-color: antiquewhite;
+}
+
+.mybody {
+    background-color: antiquewhite;
+}
+
+table {
+    margin-left: 13%;
+    width: 40vw;
+    color: rgb(94, 88, 88);
+}
+
+#form-heading {
+    color: blueviolet;
+    margin-bottom: 10%;
+    font-size: 40px;
+    text-align: center;
+}
+
+#profile-img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50px;
+}
+
+.form-header {
+    display: flex;
 }

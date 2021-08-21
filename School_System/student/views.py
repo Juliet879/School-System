@@ -1,12 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from .forms import StudentRegistrationForm
 from .models import Student
-
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 def register_student(request):
-    if request.method =="POST":
-        form = StudentRegistrationForm(request.POST)
+    if request.method == "POST":
+        form = StudentRegistrationForm(request.POST,request.FILES['documents'])
         if form.is_valid():
             form.save()
         else:
@@ -17,5 +17,6 @@ def register_student(request):
 
 def student_list(request):
     students = Student.objects.all()
-
     return render(request,"student_list.html",{"students":students})
+
+   

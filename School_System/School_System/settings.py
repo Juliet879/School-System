@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-f0sg(!cwk1m@bghi2f$!-v$q+*7&gna#2ze0b@2^9bhz8(3rh7'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['akirachix-schoolsystem.herokuapp.com','127.0.0.1']
 
@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'bootstrap3',
     'trainer',
     'courses',
+    'myCalendar',
 
 ]
 
@@ -143,7 +144,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 
 STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 
