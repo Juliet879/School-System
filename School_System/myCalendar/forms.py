@@ -14,7 +14,15 @@ class EventRegistrationForm(forms.ModelForm):
             "guest":forms.TextInput(attrs={'class':"form-control",'style':"width:95%"}),
             "date":forms.DateInput(attrs={'class':"form-control",'style':"width:95%"}),
             "event_description":forms.TextInput(attrs={'class':"form-control",'style':"width:95%"}),
-            "time_start":forms.DateTimeInput(attrs={'class':"form-control",'style':"width:95%"}),
-            "end_time":forms.DateTimeInput(attrs={'class':"form-control",'style':"width:95%"}),
+            "start_time":forms.DateTimeInput(attrs={'class':"form-control",'style':"width:95%",'type':'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+            "end_time":forms.DateTimeInput(attrs={'class':"form-control",'style':"width:95%",'type':'datetime-local'}, format='%Y-%m-%dT%H:%M'),
             "event_link":forms.TextInput(attrs={'class':"form-control",'style':"width:95%"}),
         }
+
+    def __init__(self,*args,**kwargs):
+        super(EventRegistrationForm,self).__init__(*args,**kwargs)
+        # input_formats to parse HTML5 datetime-local input to datetime field
+        self.fields['start_time'].input_formats = ('%Y-%m-%dT%H:%M',)
+        self.fields['end_time'].input_formats = ('%Y-%m-%dT%H:%M',)
+
+    

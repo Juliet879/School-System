@@ -22,10 +22,12 @@ from School_System import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("",include("core.urls")),
+    path("",include("dashboard.urls")),
     path("student/",include("student.urls")),
     path("trainer/",include("trainer.urls")),
     path("courses/",include("courses.urls")),
-    path("myCalendar",include("myCalendar.urls")),
+    path("myCalendar/",include("myCalendar.urls")),
 ]+ static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 urlpatterns += staticfiles_urlpatterns()

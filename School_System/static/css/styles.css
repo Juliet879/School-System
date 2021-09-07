@@ -189,3 +189,109 @@ table {
 .form-header {
     display: flex;
 }
+
+
+/* calendar css */
+
+.calendar {
+    width: 80%;
+    margin-left: 16%;
+    font-size: 13px;
+}
+
+.calendar tr,
+.calendar td {
+    border: 1px solid rgb(143, 8, 177);
+}
+
+.calendar th {
+    padding: 10px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.calendar td {
+    width: 100px;
+    height: 70px;
+    padding: 20px 0px 70px 5px;
+}
+
+.month {
+    font-size: 25px;
+}
+
+.date {
+    font-size: 16px;
+}
+
+ul {
+    height: 100%;
+    padding: 0px 5px 0px 20px;
+}
+
+a {
+    color: #17a2b8;
+}
+
+#btn-createEvent {
+    background-color: rgb(96, 11, 122);
+    color: wheat;
+    border-radius: 30px;
+    padding: 5px 30px;
+}
+
+.left {
+    margin-left: 20%;
+    background-color: rgb(96, 11, 122);
+}
+
+.right {
+    float: right;
+    background-color: rgb(96, 11, 122);
+}
+
+.btn {
+    outline: none;
+    color: black;
+    background-color: transparent;
+    box-shadow: 0 0 0 0;
+}
+
+.clearfix {
+    margin: 15px;
+}
+
+
+/* dashboard */
+
+
+/* Charts Style  */
+
+.fm-charts-color-1 {
+    fill: #ffa600 !important;
+}
+
+.fm-charts-color-2 {
+    fill: #7eae26 !important;
+}
+
+.fm-charts-color-3 {
+    fill: #00a45a !important;
+}
+
+.fm-charts-color-4 {
+    fill: #df3800 !important;
+}
+
+.fm-charts-color-5 {
+    fill: #e95800 !important;
+}
+
+.fm-charts-color-6 {
+    fill: #ffa600 !important;
+}
+
+
+/* #trainer-card {
+    margin-left: 30%;
+} */

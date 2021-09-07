@@ -16,7 +16,7 @@ class TrainerRegistrationForm(forms.ModelForm):
             # "email":forms.EmailInput(attrs={'class':"form-control",'style':"width:90%"}),
             "city":forms.TextInput(attrs={'class':"form-control",'style':"width:90%"}),
             "resume":forms.FileInput(attrs={'class':"form-control",'style':"width:90%"}),
-            "profile_image":forms.URLInput(attrs={'class':"form-control",'style':"width:90%"}),
+            "profile_image":forms.FileInput(attrs={'class':"form-control",'style':"width:90%"}),
             "contract":forms.FileInput(attrs={'class':"form-control",'style':"width:90%"}),
 
         }

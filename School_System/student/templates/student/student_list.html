@@ -1,4 +1,4 @@
-{% include 'School_System/base.html'%}{% load static %} {% load bootstrap3 %}
+{% include 'base.html'%}{% load static %} {% load bootstrap3 %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -19,39 +19,40 @@
     </div>
 
 
-    <table class="table table-sm table-hover">
+    <table class="table table-secondary table-hover ">
         <thead class="table">
             <tr>
+
                 <th scope="col " style="width: 4%;"></th>
-                <th scope="col ">First Name</th>
-                <th scope="col ">Last Name</th>
-                <th scope="col ">Age</th>
+
+                <th scope="col ">Name</th>
                 <th scope="col ">D.o.b</th>
                 <th scope="col ">Nationality</th>
                 <th scope="col ">Class Name</th>
-                <th scope="col ">Id_No.</th>
                 <th scope="col ">Email</th>
-                <th scope="col ">Academic year</th>
-                <th scope="col ">Medical report</th>
-                <th scope="col ">Guardian Name</th>
+                <th scope="col ">Profile</th>
+                <th scope="col "><i class="fa fa-trash" aria-hidden="true"></i></th>
+                <th scope="col ">Edit</th>
 
             </tr>
         </thead>
 
         {% for student in students %}
         <tr>
+
             <td><img id="profile-img" src="{{student.profile_image.url}}" alt="" style="width: 50px; height: 45px; border-radius: 50%;"></td>
-            <td>{{student.first_name}}</td>
-            <td>{{student.last_name}}</td>
-            <td>{{student.age}}</td>
+            <td>{{student.first_name}} {{student.last_name}}</td>
             <td>{{student.date_of_birth}}</td>
             <td>{{student.nationality}}</td>
             <td>{{student.class_name}}</td>
-            <td>{{student.id_number}}</td>
             <td>{{student.email}}</td>
-            <td>{{student.academic_year}}</td>
-            <td><img id="profile-img" src="{{student.medical_report.url}}" alt="" style="width: 50px; height: 45px; border-radius: 50%;"></td>
-            <td>{{student.guardian_name}}</td>
+            <td><a href="{% url 'profile' id=student.id %}">Profile</a></td>
+            <td>
+                <a href="{% url 'deleteStudent' id=student.id %}"> <i class="fa fa-trash" aria-hidden="true"></i></a>
+            </td>
+            <td><a href="{% url 'editStudent' id=student.id %}"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>
+            </a></td>
+
         </tr>
         {% endfor %}
     </table>
