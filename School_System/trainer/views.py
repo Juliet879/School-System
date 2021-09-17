@@ -26,7 +26,7 @@ def edit_trainer(request,id):
             form.save()
     else:
         form = TrainerRegistrationForm(instance=trainer)
-        return render(request,"edit_trainer.html",{"form":form})
+    return render(request,"edit_trainer.html",{"form":form})
 
 def trainer_profile(request,id):
     trainer = Trainer.objects.get(id=id)

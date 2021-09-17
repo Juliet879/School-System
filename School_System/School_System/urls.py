@@ -22,8 +22,10 @@ from School_System import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path("api/",include("api.urls")),
+    path("",include("landing.urls")),
     path("",include("core.urls")),
-    path("",include("dashboard.urls")),
+    path("dashboard",include("dashboard.urls")),
     path("student/",include("student.urls")),
     path("trainer/",include("trainer.urls")),
     path("courses/",include("courses.urls")),

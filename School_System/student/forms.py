@@ -1,6 +1,4 @@
 from django import forms
-from django.forms.widgets import SelectMultiple
-from django.utils.regex_helper import Choice
 from .models import Student
 
 

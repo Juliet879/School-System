@@ -1,0 +1,115 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+
+
+    <div class="main">
+        <center>
+            <h1 id="heading">Welcome To AkiraChix</h1>
+        </center>
+        <div class="mainContent">
+            <div class="content2">
+                <h3 id="motto">She Buils, She Leads, She Serves</h3>
+                <div class="smallContainer">
+                    <div class="cont1">
+                        <h4>Empathy</h4>
+                        <h4>Diversity</h4>
+                    </div>
+                    <div class="cont2">
+                        <h4>Community</h4>
+                        <h4>Life Long Learning</h4>
+                    </div>
+                </div>
+                <button id="btn-_start">Get Started</button>
+            </div>
+            <div class="content1">
+                <img id="homeImage" src={% static "homeone.png" %} alt="" style="width: 600px; height: 500px;">
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <style>
+        #btn-_start {
+            background-color: #e4dde9;
+            padding: 5px 10px;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.007);
+            color: #652792;
+            margin-left: 20%;
+            font-weight: 1000;
+            border-radius: 5px;
+        }
+        
+        #heading {
+            color: wheat;
+            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
+            font-size: 35px;
+        }
+        
+        #motto {
+            color: rgb(71, 4, 126);
+            font-weight: 1000;
+            font-size: 37px;
+        }
+        
+        .mainContent {
+            display: flex;
+        }
+        
+        h4 {
+            font-weight: 200;
+            border: 1px solid rgb(87, 83, 83);
+            padding: 15px 0px;
+            margin-left: 5px;
+            width: 130px;
+            align-items: center;
+            color: white;
+        }
+        
+        .smallContainer {
+            display: flex;
+            margin-left: 30px;
+        }
+        
+        .content2 {
+            margin-top: 15%;
+            margin-left: 20px;
+        }
+        
+        .main {
+            background: #330852;
+            background: -webkit-linear-gradient(to right, #4c1880, #5b2383);
+            /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #a044ff, #6a3093);
+            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            background-size: cover;
+            height: 98vh;
+            top: 0;
+            left: 0;
+            right: 0;
+            position: absolute;
+        }
+        
+        #homeImage {
+            margin-left: 50%;
+            margin-top: 20%;
+        }
+    </style>
+</body>
+
+</html>

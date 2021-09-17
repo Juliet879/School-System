@@ -45,6 +45,9 @@ INSTALLED_APPS = [
     'myCalendar',
     'dashboard',
     'core',
+    'api',
+    'landing',
+    'rest_framework',
 
 ]
 
