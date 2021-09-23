@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'landing',
     'staff',
     'rest_framework',
-    'django_heroku'
+    'django_heroku',
 
 ]
 
