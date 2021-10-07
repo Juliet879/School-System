@@ -10,41 +10,87 @@
 </head>
 
 <body>
-
-
-
-
     <div class="main">
-        <center>
-            <h1 id="heading">Welcome To AkiraChix</h1>
-        </center>
-        <div class="mainContent">
-            <div class="content2">
-                <h3 id="motto">She Buils, She Leads, She Serves</h3>
-                <div class="smallContainer">
-                    <div class="cont1">
-                        <h4>Empathy</h4>
-                        <h4>Diversity</h4>
-                    </div>
-                    <div class="cont2">
-                        <h4>Community</h4>
-                        <h4>Life Long Learning</h4>
-                    </div>
-                </div>
-                <button id="btn-_start">Get Started</button>
-            </div>
-            <div class="content1">
-                <img id="homeImage" src={% static "homeone.png" %} alt="" style="width: 600px; height: 500px;">
-            </div>
+        <div class="mainSub">
+            <center>
+                <h1 id="heading">AkiraChix School System</h1>
+            </center>
+            <div class="mainContent">
+                <div class="content2">
+                    <h3 id="motto">She Builds, She Leads, She Serves</h3>
+                    <div class="smallContainer">
+                        <div class="cont1">
+                            <a href="{% url 'registerStudent' %}"> <button class="btnReg">Register as Student</button ></a>
+                                <a href="{% url 'registerTrainer' %}"><button class="btnReg">Register as Trainer</button ></a>
 
+                            
+                        </div>
+                        <div class="cont2">
+                            <a href="{% url 'staffRegister' %}"><button class="btnReg">Register as Stuff</button > </a>
+                            <a href="{% url 'staffRegister' %}"><button class="btnReg">View Dashboard</button></a>
+
+                        </div>
+                    </div>
+
+
+                </div>
+
+            </div>
         </div>
     </div>
 
 
 
 
-
     <style>
+        #heading {
+            margin-left: 400px;
+            font-size: 45px;
+            color: #652792;
+            box-shadow: 4px 4px 2px 5px rgba(236, 220, 220, 0.781);
+        }
+        
+        .mainSub {
+            z-index: 9999;
+            position: absolute;
+        }
+        
+        .main {
+            background-image: url('{% static "landing.jpg" %}');
+            color: white;
+            height: 650px;
+            padding: 10px 0 0 0;
+            position: relative;
+            font-family: serif;
+        }
+        
+        .main:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, .5);
+        }
+        
+        .btnReg {
+            font-weight: 200;
+            border: 1px solid rgb(87, 83, 83);
+            padding: 15px 0px;
+            margin-left: 5px;
+            width: 130px;
+            align-items: center;
+            font-family: serif;
+            color: rgb(113, 55, 146);
+            font-weight: 800;
+        }
+        
+        .btnReg:hover {
+            background-color: #652792;
+            color: wheat;
+        }
+        
         #btn-_start {
             background-color: #e4dde9;
             padding: 5px 10px;
@@ -55,30 +101,14 @@
             border-radius: 5px;
         }
         
-        #heading {
-            color: wheat;
-            box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.1);
-            font-size: 35px;
-        }
-        
         #motto {
-            color: rgb(71, 4, 126);
+            color: rgb(189, 182, 196);
             font-weight: 1000;
             font-size: 37px;
         }
         
         .mainContent {
             display: flex;
-        }
-        
-        h4 {
-            font-weight: 200;
-            border: 1px solid rgb(87, 83, 83);
-            padding: 15px 0px;
-            margin-left: 5px;
-            width: 130px;
-            align-items: center;
-            color: white;
         }
         
         .smallContainer {
@@ -92,22 +122,12 @@
         }
         
         .main {
-            background: #330852;
-            background: -webkit-linear-gradient(to right, #4c1880, #5b2383);
-            /* Chrome 10-25, Safari 5.1-6 */
-            background: linear-gradient(to right, #a044ff, #6a3093);
-            /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
             background-size: cover;
             height: 98vh;
             top: 0;
             left: 0;
             right: 0;
             position: absolute;
-        }
-        
-        #homeImage {
-            margin-left: 50%;
-            margin-top: 20%;
         }
     </style>
 </body>

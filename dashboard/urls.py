@@ -3,5 +3,5 @@ from django.urls import path
 
 
 urlpatterns = [
-    path("",home,name="landing")
+    path("",home,name="dashboard")
 ]

@@ -2,7 +2,7 @@ import calendar
 from datetime import date, timedelta
 import datetime
 from django.http.response import HttpResponseRedirect
-from django.shortcuts import get_object_or_404, render
+from django.shortcuts import get_object_or_404, redirect, render
 from django.http import HttpResponse
 from django.views import generic
 from django.utils.safestring import mark_safe
@@ -58,7 +58,7 @@ def register_event(request,event_id=None):
         form = EventRegistrationForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
-            return HttpResponseRedirect(reverse('myCalendar:calendar'))
+            return redirect('myCalendar:calendar')
         else:
             print(form.errors)
     return render(request,'register_event.html',{"form":form})

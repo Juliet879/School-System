@@ -5,7 +5,7 @@ from .models import Student
 # from django.core import serializers
 # from django.core.files.storage import FileSystemStorage
 
-# Create your views here.
+#Register a new student.
 def register_student(request):
     if request.method == "POST":
         form = StudentRegistrationForm(request.POST,request.FILES)

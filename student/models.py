@@ -1,4 +1,5 @@
 from django.db import models
+import datetime
 # from phonenumber_fields.modelfields import PhoneNumberField
 
 # Create your models here.
@@ -28,4 +29,11 @@ class Student(models.Model):
     # guardian_contact = models.
     profile_image = models.ImageField(upload_to ="images/",null=True,blank=True)
     
+    
+    def full_name(self):
+        return f"{self.full_name} {self.last_name}"
+
+    def year_of_birth(self):
+        current_year = datetime.datetime.now().year
+        return current_year - self.age
     
